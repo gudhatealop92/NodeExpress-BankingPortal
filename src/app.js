@@ -21,6 +21,11 @@ app.get('/', (req, res) => {
         accounts: accounts
     })
 })
+app.get('/savings', (req, res) => {
+    res.render('account', {
+        account: accounts.savings
+    })
+})
 
 app.listen(3000, () => {
     console.log("server is listening on port 3000.")

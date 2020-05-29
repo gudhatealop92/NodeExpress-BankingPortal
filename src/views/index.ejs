@@ -5,17 +5,9 @@
     <a href="/profile">Profile</a>
 </div>
 
-<% accounts.savings.forEach(function(account){ %>
-    <%- include('summary', {account: account}); %>
-<% }); %>
-
-<% accounts.checking.forEach(function(account){ %>
-    <%- include('summary', {account: account}); %>
-<% }); %>
-
-<% accounts.credit.forEach(function(account){ %>
-    <%- include('summary', {account: account}); %>
-<% }); %>
+<%- include('summary', {account: accounts.checking}); %>
+<%- include('summary', {account: accounts.credit}); %>
+<%- include('summary', {account: accounts.credit}); %>
 
 br
 <a href="/transfer">Transfer</a>

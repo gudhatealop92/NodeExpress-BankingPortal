@@ -26,6 +26,16 @@ app.get('/savings', (req, res) => {
         account: accounts.savings
     })
 })
+app.get('/checking', (req, res) => {
+    res.render('account', {
+        account: accounts.checking
+    })
+})
+app.get('/credit', (req, res) => {
+    res.render('account', {
+        account: accounts.credit
+    })
+})
 
 app.listen(3000, () => {
     console.log("server is listening on port 3000.")
